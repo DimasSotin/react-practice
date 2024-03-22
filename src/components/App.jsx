@@ -1,22 +1,24 @@
-// src/App.jsx
+// src/components/App.jsx
 
-const Product = () => {
+import { Alert } from './Alert';
+
+const App = () => {
   return (
-    <div>
-      <h2>Cookies</h2>
-      <p>Price: 999 credits</p>
-    </div>
+    <>
+      <Alert variant="info">
+        Would you like to browse our recommended products?
+      </Alert>
+      <Alert variant="error">
+        There was an error during your last transaction
+      </Alert>
+      <Alert variant="success">
+        Payment received, thank you for your purchase
+      </Alert>
+      <Alert variant="warning">
+        Please update your profile contact information
+      </Alert>
+    </>
   );
 };
 
-export default function App() {
-  return (
-    <div>
-      <h1>Products</h1>
-
-      <Product />
-      <Product />
-      <Product />
-    </div>
-  );
-}
+export default App;
